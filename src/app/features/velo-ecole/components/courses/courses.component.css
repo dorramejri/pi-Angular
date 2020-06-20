@@ -1,0 +1,77 @@
+.main-container {
+	padding: 5px 15px;
+}
+.cart-container {
+	text-align:center;
+	padding: 5px;
+}
+.card-cascade {
+	padding: 10px 0;
+}
+.cart-info {
+	margin-bottom: 10px;
+}
+h3 {
+	font-size: 18px;
+	font-weight: 600;
+	font-family: Roboto,Noto,sans-serif;
+}
+::ng-deep .btn-outline-white {
+	box-shadow: none !important;
+}
+.btn-rounded {
+	width: 33px;
+	line-height: 16px !important;
+	padding: 6px !important;
+	margin: 0px 2px;
+	border-radius: 5px;
+	background: #FFF;
+}
+.btn-rounded.active {
+	background-color: rgba(36, 105, 255, .2) !important;
+	border-radius: 0px !important;
+}
+.weight500 {
+	font-weight: 500;
+}
+.full-right {
+	margin-right: 0px !important;
+}
+.weight600 {
+	font-weight: 600;
+	font-size: 17px;
+}
+.btn-schedule {
+	background: #FFF;
+	color: #101010;
+  line-height: 0;
+  box-shadow: none !important;
+  border: 1px solid #eee !important;
+}
+.btn-schedule:hover {
+  background: #F5F5F5 !important;
+}
+.btn-schedule .fa {
+	margin-right: 5px;
+}
+.btn {
+  margin: .375rem !important;
+  word-wrap: break-word !important;
+  white-space: normal !important;
+  cursor: pointer !important;
+  border-radius: .125rem !important;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out !important;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out !important;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out !important;
+  font-size: .81rem !important;
+  outline: none !important;
+}
+
+.btn:hover {
+  outline: 0 !important;
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}

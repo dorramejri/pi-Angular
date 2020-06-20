@@ -1,0 +1,26 @@
+<div class="cart-container">
+  <div class="card-cascade narrower">
+    <div
+      class="view view-cascade gradient-card-header blue-gradient narrower mx-4 mb-3 d-flex justify-content-between align-items-center">
+      <span class="white-text mx-3 weight600">Course Planification</span>
+      <div>
+        <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"
+                [ngClass]="{active : displayMode === 'CALENDAR'}"
+                (click)="changeDisplayMode('CALENDAR')">
+          <i class="fa fa-calendar mt-0"></i>
+        </button>
+        <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2"
+                [ngClass]="{active : displayMode === 'FORM'}"
+                (click)="changeDisplayMode('FORM')">
+          <i class="fa fa-columns mt-0"></i>
+        </button>
+      </div>
+    </div>
+    <div class="px-4">
+      <app-new-course-calendar [courses]="courses$ | async" [hidden]="displayMode !== 'CALENDAR'"
+                            (deleteCourseEvent)="onDeleteCourse($event)"></app-new-course-calendar>
+      <app-new-course-form [hidden]="displayMode !== 'FORM'"
+                            (deleteCourseEvent)="onDeleteCourse($event)"></app-new-course-form>
+    </div>
+  </div>
+</div>

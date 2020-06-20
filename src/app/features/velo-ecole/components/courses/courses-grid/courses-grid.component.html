@@ -1,0 +1,62 @@
+<div class="main-container">
+  <div class="row col-lg-12 search-bar">
+    <div class="col-6 col-md-6 pull-left">
+      <div class="form-group has-search">
+        <span class="fa fa-search form-control-feedback"></span>
+        <input type="text" class="form-control" placeholder="Search by name, address or status ..."
+        (change)="updateResults()" (keyup)="updateResults()" [(ngModel)]="searchValue">
+      </div>
+    </div>
+    <div class="col-6 col-md-6 pull-right">
+      <select name="categories" id="custom-select" (change)="getMoviesByCateg($event.target.value)">
+        <option value="All Courses">All Courses</option>
+        <option value="My Courses">My Courses</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 pagination justify-content-center">
+      <pagination-controls maxSize="5" directionLinks="true" autoHide="true" (pageChange)="page = $event">
+      </pagination-controls>
+    </div>
+    <div class="col-md-12">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Course Name</th>
+            <th>Course Address</th>
+            <th>Course Date</th>
+            <th>Course time</th>
+            <th>Course Duration</th>
+            <th>Course Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let course of filteredCourses | paginate: { itemsPerPage: 5, currentPage: page }" [ngClass]="
+            routeAnimationsElements">
+            <td>{{ course.name }}</td>
+            <td>{{ course.address }}</td>
+            <td>{{ course.date }}</td>
+            <td><span class="time">{{ course.time.substring(0, 2) }}</span> : <span
+                class="time">{{ course.time.substring(3, 5) }}</span></td>
+            <td>{{ course.duration }}</td>
+            <td *ngIf="course.status === 'PENDING'"><span class="badge badge-status-pending">{{ course.status }}</span>
+            </td>
+            <td *ngIf="course.status === 'VALIDATED'"><span
+                class="badge badge-status-validated">{{ course.status }}</span></td>
+            <td *ngIf="course.status === 'NOT_VALIDATED'"><span
+                class="badge badge-status-not_validated">{{ course.status }}</span></td>
+            <td>
+              <i title="View Orders" class="fa fa-eye view-icon"
+                [routerLink]="['/velo-ecole/courses/details/', course.id]"></i>
+              <i title="Edit" class="fa fa-pencil-square-o edit-icon"
+                [routerLink]="['/velo-ecole/courses/edit/', course.id]"></i>
+              <i title="Delete" class="fa fa-trash delete-icon" (click)="handleDeleteCourseClick(course.id)"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

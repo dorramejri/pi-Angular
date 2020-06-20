@@ -1,0 +1,97 @@
+:host /deep/ .fc-day-grid-event {
+	color: white !important;
+	min-height: 25px !important;
+	line-height: 2 !important;
+	padding-left: 10px !important;
+}
+:host /deep/ .fc-view-container {
+	font-family: Roboto,Helvetica,Arial,sans-serif;
+	font-size: 13px;
+}
+:host /deep/ .fc-today-button, :host /deep/ .fc-dayGridMonth-button, :host /deep/ .fc-timeGridWeek-button, :host /deep/ .fc-timeGridDay-button {
+	font-family: 'Google Sans',Roboto,Arial,sans-serif !important;
+	font-size: 14px !important;
+	font-weight: 500 !important;
+	letter-spacing: .25px !important;
+	text-transform: none !important;
+	opacity: 1 !important;
+	color: #3c4043 !important;
+	background: #fff !important;
+	border: 1px solid #BDBDBD !important;
+}
+:host /deep/ .fc-prev-button, :host /deep/ .fc-next-button {
+	background: #FFF !important;
+	color: #3c4043 !important;
+	border-width: 0px !important;
+	border-radius: 50% !important;
+}
+#id_confrmdiv
+{
+    display: none;
+    background-color: #FAFAFA;
+    border-radius: 5px;
+    border: 1px solid #E0E0E0;
+    position: fixed;
+    width: 500px;
+    left: 42%;
+    margin-left: -150px;
+    box-sizing: border-box;
+    text-align: left;
+    z-index: 100000;
+    top: 70px;
+}
+#id_confrmdiv input{
+    height: 30px !important;
+    margin-bottom: 10px;
+}
+
+.box-body {
+    padding: 5px 15px;
+}
+
+.title {
+    font-size: 15px;
+    font-style: italic;
+    display: block;
+    margin-bottom: 12px;
+    margin: 3px;
+    padding: 0px 10px;
+    background-color: #BF360C;
+    border-radius: 2px;
+}
+
+#id_confrmdiv button {
+    background-color: #FFF;
+    display: inline-block;
+    border-radius: 3px;
+    border: 1px solid #aaa;
+    padding: 2px;
+    text-align: center;
+    width: 80px;
+    cursor: pointer;
+    margin: 5px 10px;
+    float: right;
+}
+#id_confrmdiv button:hover
+{
+    background-color: #ddd;
+}
+#confirmBox .message
+{
+    text-align: left;
+    margin-bottom: 8px;
+}
+.app-calendar {
+    position: absolute;
+    margin-right: 30px;
+}
+.title {
+    font-size: 16px;
+    font-style: italic;
+    display: block;
+    margin-bottom: 12px;
+    color: #FFF !important;
+}
+:host /deep/ .fc-content {
+    line-height: 2.4 !important;
+}

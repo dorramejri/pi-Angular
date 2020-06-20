@@ -1,0 +1,35 @@
+<div class='app-calendar'>
+  <full-calendar #calendar defaultView="dayGridMonth" [header]="{
+      left: 'prev,next today',
+      center: 'title',
+      right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+    }" [plugins]="calendarPlugins" [weekends]="true" [events]="calendarEvents" (dateClick)="handleDateClick($event)">
+  </full-calendar>
+</div>
+
+<!--  Course Event Modal  -->
+<div class='box-container'>
+  <div id="id_confrmdiv">
+    <span class="title">New Course</span>
+    <div class='row box-body'>
+      <div class='col-lg-6'>
+        Name
+        <input type="text" id='event_name' class="form-control form-control-sm" />
+      </div>
+      <div class='col-lg-6'>
+        Time
+        <input type="time" id='event_time' class="form-control form-control-sm" />
+      </div>
+      <div class='col-lg-6'>
+        Address
+        <input type="text" id='event_address' class="form-control form-control-sm" />
+      </div>
+      <div class='col-lg-6'>
+        Duration
+        <input type="time" id='event_duration' class="form-control form-control-sm" />
+      </div>
+    </div>
+    <button id="id_truebtn">Yes</button>
+    <button id="id_falsebtn">No</button>
+  </div>
+</div>

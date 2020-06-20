@@ -1,0 +1,43 @@
+.main-container {
+	padding: 5px 15px;
+}
+.cart-container {
+	text-align:center;
+	padding: 5px;
+}
+.card-cascade {
+	padding: 10px 0;
+}
+.cart-info {
+	margin-bottom: 10px;
+}
+h3 {
+	font-size: 18px;
+	font-weight: 600;
+	font-family: Roboto,Noto,sans-serif;
+}
+::ng-deep .btn-outline-white {
+	box-shadow: none !important;
+}
+.btn-rounded {
+	width: 33px;
+	line-height: 16px !important;
+	padding: 6px !important;
+	margin: 0px 2px;
+	border-radius: 5px;
+	background: #FFF;
+}
+.btn-rounded.active {
+	background-color: rgba(36, 105, 255, .2) !important;
+	border-radius: 0px !important;
+}
+.weight500 {
+	font-weight: 500;
+}
+.full-right {
+	margin-right: 0px !important;
+}
+.weight600 {
+	font-weight: 600;
+	font-size: 17px;
+}

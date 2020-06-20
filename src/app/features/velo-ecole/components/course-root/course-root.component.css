@@ -1,0 +1,26 @@
+.breadcrumb_section {
+    box-shadow: 0 3px 3px -3px rgba(0,0,0,.2);
+}
+.nav_items {
+    margin-left: 50px;
+    display: flex;
+}
+
+.nav_items li {
+    margin-right: 20px;
+}
+
+.nav_items li a {
+    font-weight: 500;
+    color: #757575;
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+.nav_items li a:hover {
+    color: #f6563c !important;
+}
+
+.breadcrumb_inner > ul li {
+    text-transform: none !important;
+}

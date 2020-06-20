@@ -1,0 +1,28 @@
+<div>
+  <div class="container-fluid">
+    <h1 class="text-center mb-3">our services</h1>
+    <p></p>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner row w-100 mx-auto">
+        <div class="carousel-item col-md-4 " *ngFor="let data of datas; let i=index" [ngClass]="(i === 0) ? 'active' : ''" >
+          <div class="card single_banner">
+            <img class="card-img-top img-fluid" src="{{data.image}}" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">{{ data.name }}</h4>
+              <p class="card-text">{{data.discription}}.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  </div>

@@ -1,0 +1,110 @@
+[
+    {
+        "id": "01",
+        "name": "First Course",
+        "date": "2020-06-18",
+        "time": "09:15",
+        "address": "Adress 1",
+        "duration": "2h",
+        "status": "PENDING"
+    },
+    {
+        "id": "02",
+        "name": "Second Course",
+        "date": "2020-06-19",
+        "time": "10:45",
+        "address": "Address 2",
+        "duration": "2h",
+        "status": "NOT_VALIDATED"
+    },
+    {
+        "id": "03",
+        "name": "Third Course",
+        "date": "2020-06-20",
+        "time": "15:30",
+        "address": "Address 3",
+        "duration": "2h",
+        "status": "PENDING"
+    },
+    {
+        "id": "04",
+        "name": "Fourth Course",
+        "date": "2020-06-21",
+        "time": "16:55",
+        "address": "Address 4",
+        "duration": "2h",
+        "status": "NOT_VALIDATED"
+    },
+    {
+        "id": "05",
+        "name": "First Course",
+        "date": "2020-06-18",
+        "time": "09:15",
+        "address": "Adress 1",
+        "duration": "2h",
+        "status": "PENDING"
+    },
+    {
+        "id": "06",
+        "name": "Second Course",
+        "date": "2020-06-19",
+        "time": "10:45",
+        "address": "Address 2",
+        "duration": "2h",
+        "status": "NOT_VALIDATED"
+    },
+    {
+        "id": "07",
+        "name": "Third Course",
+        "date": "2020-06-20",
+        "time": "15:30",
+        "address": "Address 3",
+        "duration": "2h",
+        "status": "PENDING"
+    },
+    {
+        "id": "08",
+        "name": "Fourth Course",
+        "date": "2020-06-21",
+        "time": "16:55",
+        "address": "Address 4",
+        "duration": "2h",
+        "status": "NOT_VALIDATED"
+    },
+    {
+        "id": "09",
+        "name": "First Course",
+        "date": "2020-06-18",
+        "time": "09:15",
+        "address": "Adress 1",
+        "duration": "2h",
+        "status": "PENDING"
+    },
+    {
+        "id": "10",
+        "name": "Second Course",
+        "date": "2020-06-19",
+        "time": "10:45",
+        "address": "Address 2",
+        "duration": "2h",
+        "status": "NOT_VALIDATED"
+    },
+    {
+        "id": "11",
+        "name": "Third Course",
+        "date": "2020-06-20",
+        "time": "15:30",
+        "address": "Address 3",
+        "duration": "2h",
+        "status": "PENDING"
+    },
+    {
+        "id": "12",
+        "name": "Fourth Course",
+        "date": "2020-06-21",
+        "time": "16:55",
+        "address": "Address 4",
+        "duration": "2h",
+        "status": "NOT_VALIDATED"
+    }
+]

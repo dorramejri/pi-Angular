@@ -1,0 +1,66 @@
+<div class="container-fluid">
+  <form (ngSubmit)="submit()" #form="ngForm" class="course_form py-3" *ngIf="course$ | async as course">
+    <div class="controls">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" class="form-control form-control-sm" name="name" [(ngModel)]="course.name" id="name"
+              #name="ngModel" [ngClass]="{ 'is-invalid': form.submitted && name.invalid }" disabled>
+            <div *ngIf="form.submitted && name.invalid" class="invalid-feedback">
+              <div *ngIf="name.errors.required">First Name is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="address">Address *</label>
+            <input type="text" name="address" class="form-control form-control-sm" [(ngModel)]="course.address"
+              id="address" #address="ngModel" [ngClass]="{ 'is-invalid': form.submitted && address.invalid }" disabled>
+            <div *ngIf="form.submitted && address.invalid" class="invalid-feedback">
+              <div *ngIf="address.errors.required">Address is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="date">Date *</label>
+            <input type="date" name="date" class="form-control form-control-sm" [(ngModel)]="course.date" id="date"
+              #date="ngModel" [ngClass]="{ 'is-invalid': form.submitted && date.invalid }" disabled>
+            <div *ngIf="form.submitted && date.invalid" class="invalid-feedback">
+              <div *ngIf="date.errors.required">Date is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="time">Time *</label>
+            <input type="time" name="time" class="form-control form-control-sm" [(ngModel)]="course.time" id="date"
+              #time="ngModel" [ngClass]="{ 'is-invalid': form.submitted && time.invalid }" disabled>
+            <div *ngIf="form.submitted && time.invalid" class="invalid-feedback">
+              <div *ngIf="time.errors.required">Time is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="duration">Duration *</label>
+            <input type="time" name="duration" placeholer = "HH-mm-ss" class="form-control form-control-sm" [(ngModel)]="course.duration"
+              id="duration" #address="ngModel" [ngClass]="{ 'is-invalid': form.submitted && duration.invalid }" disabled>
+            <div *ngIf="form.submitted && duration.invalid" class="invalid-feedback">
+              <div *ngIf="duration.errors.required">Duration is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+            <div class="pull-right">
+              <button class="btn btn-back" [routerLink]="['/velo-ecole/courses']">Cancel</button>
+              <button class="btn btn-danger" (click)="handleResetForm()">Reset</button>
+              <button type="submit" class="btn btn-success"
+                      [disabled]="courseForm.pristine || !courseForm.valid">Insert</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

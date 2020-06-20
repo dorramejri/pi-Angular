@@ -1,0 +1,23 @@
+<div class="breadcrumb_section">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="breadcrumb_inner">
+                  <ul>
+                      <li><a [routerLink]="['/']">Home</a></li>
+                      <div class="nav_items">
+                        <li><a  [routerLink]="['/velo-ecole/courses/new-course']" [routerLinkActive]="'active'">Organize a
+                            course</a></li>
+                        <li><a  [routerLink]="['/velo-ecole/courses/course-validation']" [routerLinkActive]="'active'">Validate a
+                            course</a></li>
+                        <li><a  [routerLink]="['/velo-ecole/courses/course-participation']" [routerLinkActive]="'active'">Participate to a course</a></li>
+                        <li><a  [routerLink]="['/velo-ecole/courses']" [routerLinkActive]="'active'">Manage a course</a></li>
+                        <li><a  [routerLink]="['/register']">Register as a teacher</a></li>
+                      </div>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

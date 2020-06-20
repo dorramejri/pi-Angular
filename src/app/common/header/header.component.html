@@ -1,0 +1,64 @@
+<header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <div class="header_middle">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="logo text-center">
+                                    <a routerLink="/"><img src="assets/img/logo/logo.png" alt="exporso logo"
+                                            style="width: 100px;"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="header_bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 col-12">
+                                <div class="menu d-none d-lg-block margin">
+                                    <nav>
+                                        <ul class="d-flex justify-content-center">
+                                            <li><a routerLink="/">HOME </a></li>
+                                            <li><a routerLink="/location">location</a></li>
+                                            <li><a routerLink="/equipement">equipement</a></li>
+                                            <li><a routerLink="/visite">visite touristique</a></li>
+                                            <li>
+                                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                    role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    VELO ECOLE
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                    <a class="dropdown-item" [routerLink]="['/velo-ecole/courses/new-course']">Organize a
+                                                        course</a>
+                                                    <a class="dropdown-item" [routerLink]="['/velo-ecole/courses/course-validation']">Validate a
+                                                        course</a>
+                                                    <a class="dropdown-item" [routerLink]="['/velo-ecole/courses/course-participation']">Participate to a course</a>
+                                                    <a class="dropdown-item" [routerLink]="['/velo-ecole/courses']">Manage a course</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" [routerLink]="['/register-teacher']">Register as a
+                                                        Teacher</a>
+                                                </div>
+                                            </li>
+                                            <li><a routerLink="/competition">competition velo</a></li>
+                                            <li><a routerLink="/register">Register</a>
+                                            </li>
+                                            <li><a routerLink="/login">login</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

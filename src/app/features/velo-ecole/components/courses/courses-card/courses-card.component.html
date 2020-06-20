@@ -1,0 +1,61 @@
+<div class="main-container">
+  <div class="row col-lg-12 search-bar">
+    <div class="col-6 col-md-6 pull-left">
+        <div class="form-group has-search">
+            <span class="fa fa-search form-control-feedback"></span>
+            <input type="text" class="form-control" placeholder="Search by name, address or status ..."
+            (change)="updateResults()" (keyup)="updateResults()" [(ngModel)]="searchValue">        </div>
+    </div>
+    <div class="col-6 col-md-6 pull-right">
+        <select name="categories" id="custom-select" (change)="getMoviesByCateg($event.target.value)">
+            <option value="All Courses">All Courses</option>
+            <option value="My Courses">My Courses</option>
+        </select>
+    </div>
+</div>
+  <div class="row">
+    <div class="col-12 pagination justify-content-center">
+      <pagination-controls
+        maxSize="50"
+        directionLinks="true"
+        (pageChange)="page = $event">
+      </pagination-controls>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3"
+         *ngFor="let course of filteredCourses | paginate: { itemsPerPage: 8, currentPage: page }">
+      <div class="card">
+        <div class="card-header">
+          <img class="card-avatar" src="https://www.tanger-institut.com/wp-content/uploads/2016/02/cours-en-ligne.png"/>
+          <a class="text-ellipsed" [routerLink]="['/courses',course.id,'details']">
+            {{course.name }}
+          </a>
+          <div class="pull-right">
+            <a [routerLink]="['/velo-ecole/courses/edit/', course.id]">
+              <i title="Edit"
+                 class="fa fa-pencil-square-o edit-icon"></i>
+            </a>
+            <a (click)="handleDeleteCourseClick(course.id)">
+              <i title="Delete"
+                 class="fa fa-trash delete-icon"></i>
+            </a>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="clearfix">
+            <div class="">
+              <label class="label-info"><span class="text-muted">Address </span> {{course.address}}</label>
+              <label class="label-info"><span class="text-muted">Date </span> {{course.date }}</label>
+              <label class="label-info"><span class="text-muted">Time </span> {{course.time}}</label>
+              <label class="label-info"><span class="text-muted">Duration </span> {{course.duration}}</label>
+              <label class="label-info"><span class="text-muted">Status </span> <span *ngIf="course.status === 'PENDING'" class="badge badge-status-pending">{{course.status}}</span>
+                <span *ngIf="course.status === 'VALIDATED'" class="badge badge-status-validated">{{course.status}}</span><span *ngIf="course.status === 'NOT_VALIDATED'" class="badge badge-status-not_validated">{{course.status}}</span></label>
+            </div>
+            <button class="btn btn-outline-border" [routerLink]="['/velo-ecole/courses/details/', course.id]">
+              View Course Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
